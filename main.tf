@@ -54,7 +54,7 @@ resource "aws_security_group" "sg_22" {
     "Environment" = "${var.environment_tag}"
   }
 }
-resource "aws_instance" "testInstance" {
+resource "aws_instance" "ProductionJenkins" {
   ami           = "${var.instance_ami}"
   instance_type = "${var.instance_type}"
   subnet_id = "${aws_subnet.subnet_public.id}"
