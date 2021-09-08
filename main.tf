@@ -54,10 +54,6 @@ resource "aws_security_group" "sg_22" {
     "Environment" = "${var.environment_tag}"
   }
 }
-resource "aws_key_pair" "ec2key" {
-  key_name = "publicKey"
-  public_key = "${file(var.public_key_path)}"
-}
 resource "aws_instance" "testInstance" {
   ami           = "${var.instance_ami}"
   instance_type = "${var.instance_type}"
