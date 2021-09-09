@@ -1,7 +1,7 @@
 pipeline{
     agent any
     tools {
-       terraform 'Terraform-11'
+       terraform 'Terraform'
     }
     stages{
         stage('Git Checkout'){
